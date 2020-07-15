@@ -78,3 +78,8 @@ html {
 #music {
   display:none;
 }
+
+/*Click counter*/
+p#counter {
+  text-align: center;
+}
