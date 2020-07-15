@@ -56,3 +56,25 @@ html {
 .simon-button.blue {
   background-color: #2185D0;
 }
+
+/* button hover */
+
+.simon-button.blue:hover {
+  opacity: .3;
+}
+
+.simon-button.yellow:hover {
+  opacity: .3;
+}
+
+.simon-button.green:hover {
+  opacity: .3;
+}
+
+.simon-button.red:hover {
+  opacity: .3;
+}
+
+#music {
+  display:none;
+}

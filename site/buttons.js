@@ -1,19 +1,23 @@
 let greenButton = document.querySelector('.simon-button.green');
 greenButton.addEventListener('click', function() {
-  alert('You clicked the green button');
+  var myMusic = document.getElementById("music");
+  myMusic.play();
 });
 
 let redButton = document.querySelector('.simon-button.red');
 redButton.addEventListener('click', function() {
-  alert('You clicked the red button');
+  var myMusic = document.getElementById("music");
+  myMusic.play();
 });
 
 let yellowButton = document.querySelector('.simon-button.yellow');
 yellowButton.addEventListener('click', function() {
-  alert('You clicked the yellow button');
+  var myMusic = document.getElementById("music");
+  myMusic.play();
 });
 
 let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
-  alert('You clicked the blue button');
+  var myMusic = document.getElementById("music");
+  myMusic.play();
 });
