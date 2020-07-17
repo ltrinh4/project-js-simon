@@ -1,58 +1,78 @@
 var clicks = 0;
+var myVar;
 
 let greenButton = document.querySelector('.simon-button.green');
 greenButton.addEventListener('click', function() {
+	if(clicks === 5){
+		alert('Game Over. You scored ' + clicks + ' Points')
+	}
+	clearTimeout(myVar);
+	myVar = setTimeout(timer, 2000); 
   _playMusic();
   clickIncrement();
-  if (color === 4) {
-		randomGenerator();
-
-  } else {
-    alert('You suck! Game over!');
+  if (color !== 4) {
+		alert('You suck! Game over!');
     location.reload();
+  } else{
+	  randomGenerator();
   }
 });
 
 let redButton = document.querySelector('.simon-button.red');
 redButton.addEventListener('click', function() {
+	clearTimeout(myVar);
+	myVar = setTimeout(timer, 3000);
   _playMusic();
   clickIncrement();
-  if (color === 1) {
-    randomGenerator();
-  } else {
-    alert('You suck! Game over!');
+   if (color !== 1) {
+		alert('You suck! Game over!');
     location.reload();
+  } else {
+	  randomGenerator();
   }
 });
 
 let yellowButton = document.querySelector('.simon-button.yellow');
 yellowButton.addEventListener('click', function() {
+	clearTimeout(myVar);
+	myVar = setTimeout(timer, 3000);
   _playMusic();
   clickIncrement();
-  if (color === 3) {
-    randomGenerator();
-  } else {
-    alert('You suck! Game over!');
+   if (color !== 3) {
+		alert('You suck! Game over!');
     location.reload();
+  } else {
+	  randomGenerator();
   }
 });
 
 let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
+	clearTimeout(myVar);
+	myVar = setTimeout(timer, 3000);
   _playMusic();
   clickIncrement();
-  if (color === 2) {
-    randomGenerator();
-  } else {
-    alert('You suck! Game over!');
+   if (color !== 2) {
+		alert('You suck! Game over!');
     location.reload();
+  } else {
+	  randomGenerator();
   }
 });
 
 let playButton = document.querySelector('#play');
 playButton.addEventListener('click', function() {
+	clearTimeout(myVar);
+	
+myVar = setTimeout(timer, 3000);
   randomGenerator();
 });
+
+let replayButton = document.querySelector('#replay');
+replayButton.addEventListener('click', function() {
+	location.reload();
+});
+
 
 function _playMusic() {
   var myMusic = document.getElementById('music');
@@ -63,6 +83,41 @@ function clickIncrement() {
   clicks += 1;
   document.getElementById('clicks').innerHTML = clicks;
 }
+/*
+if(press play){
+start counter;
+generate random color;
+   if(color clicked in 3 seconds){
+     stop previus clock;
+	 start clock;
+	 generate next number
+   } else if(color not clicked in 3 seconds){
+   alert;
+   reload;
+   }
+}
+
+
+*/
+function timer() {
+	if(blueButton.clicked == true) {
+		clearTimeout(myVar);
+		
+	} else if(yellowButton.clicked == true) {
+		clearTimeout(myVar);
+		
+	} else if(greenButton.clicked == true) {
+		clearTimeout(myVar);
+		
+	} else if(redButton.clicked == true) {
+		clearTimeout(myVar);
+	
+	} else {
+	 alert('TimedOut');
+	 location.reload();
+     }
+}
+
 var color = 0;
 function randomGenerator() {
   var randomNumber = Math.floor(Math.random() * 4) + 1; // generate random number between 1 and 4 inclusive

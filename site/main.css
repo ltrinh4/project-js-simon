@@ -109,6 +109,18 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#replay {
+
+  display: block;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #5D6063;
+  border-radius: 10px;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
 #play:hover {
   opacity: 0.7;
 }
