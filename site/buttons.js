@@ -3,9 +3,9 @@ var myVar;
 
 let greenButton = document.querySelector('.simon-button.green');
 greenButton.addEventListener('click', function() {
-	
+
 	clearTimeout(myVar);
-	myVar = setTimeout(timer, 2000);
+	myVar = setTimeout(timer, 2500);
   _playMusic();
   clickIncrement();
   if (color !== 4) {
@@ -18,9 +18,9 @@ greenButton.addEventListener('click', function() {
 
 let redButton = document.querySelector('.simon-button.red');
 redButton.addEventListener('click', function() {
-	
+
 	clearTimeout(myVar);
-	myVar = setTimeout(timer, 3000);
+	myVar = setTimeout(timer, 2500);
   _playMusic();
   clickIncrement();
    if (color !== 1) {
@@ -33,9 +33,9 @@ redButton.addEventListener('click', function() {
 
 let yellowButton = document.querySelector('.simon-button.yellow');
 yellowButton.addEventListener('click', function() {
-	
+
 	clearTimeout(myVar);
-	myVar = setTimeout(timer, 3000);
+	myVar = setTimeout(timer, 2500);
   _playMusic();
   clickIncrement();
    if (color !== 3) {
@@ -48,15 +48,15 @@ yellowButton.addEventListener('click', function() {
 
 let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
-	
+
 	clearTimeout(myVar);
-	myVar = setTimeout(timer, 3000);
+	myVar = setTimeout(timer, 2500);
   _playMusic();
   clickIncrement();
    if (color !== 2) {
 		alert('Game over! You scored ' + clicks + ' Points');
     location.reload();
-	   
+
   } else {
 	  randomGenerator();
   }
@@ -66,7 +66,7 @@ let playButton = document.querySelector('#play');
 playButton.addEventListener('click', function() {
 	clearTimeout(myVar);
 
-myVar = setTimeout(timer, 3000);
+myVar = setTimeout(timer, 2500);
   randomGenerator();
 });
 
