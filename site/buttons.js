@@ -7,7 +7,7 @@ greenButton.addEventListener('click', function() {
 		alert('Game Over. You scored ' + clicks + ' Points')
 	}
 	clearTimeout(myVar);
-	myVar = setTimeout(timer, 2000); 
+	myVar = setTimeout(timer, 2000);
   _playMusic();
   clickIncrement();
   if (color !== 4) {
@@ -63,7 +63,7 @@ blueButton.addEventListener('click', function() {
 let playButton = document.querySelector('#play');
 playButton.addEventListener('click', function() {
 	clearTimeout(myVar);
-	
+
 myVar = setTimeout(timer, 3000);
   randomGenerator();
 });
@@ -102,18 +102,18 @@ generate random color;
 function timer() {
 	if(blueButton.clicked == true) {
 		clearTimeout(myVar);
-		
+
 	} else if(yellowButton.clicked == true) {
 		clearTimeout(myVar);
-		
+
 	} else if(greenButton.clicked == true) {
 		clearTimeout(myVar);
-		
+
 	} else if(redButton.clicked == true) {
 		clearTimeout(myVar);
-	
+
 	} else {
-	 alert('TimedOut');
+	 alert('You ran out of time. Try again!');
 	 location.reload();
      }
 }
